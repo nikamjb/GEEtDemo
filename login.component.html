@@ -86,47 +86,47 @@
             <div *ngIf="adminDiv">
             <input
               type="text"
-              placeholder="Admin First Name" [(ngModel)]="First"
+              placeholder="Admin First Name" [(ngModel)]="admin.adminFirstName"
               [ngModelOptions]="{ standalone: true }"
             />
             <input
               type="text"
-              placeholder="Admin Last Name" [(ngModel)]="Last"
+              placeholder="Admin Last Name" [(ngModel)]="admin.adminLastName"
               [ngModelOptions]="{ standalone: true }"
             />
             <input
               type="email"
-              placeholder="Admin Email" [(ngModel)]="email"
+              placeholder="Admin Email" [(ngModel)]="admin.adminEmailId"
               [ngModelOptions]="{ standalone: true }"
             />
             <input
               type="number"
-              placeholder="Admin Contact" [(ngModel)]="Contact"
+              placeholder="Admin Contact" [(ngModel)]="admin.adminContact"
               [ngModelOptions]="{ standalone: true }"
             />
             <input
               type="text"
-              placeholder="Admin Aadhar" [(ngModel)]="Aadhar"
+              placeholder="Admin Aadhar" [(ngModel)]="admin.adminAadharNo"
               [ngModelOptions]="{ standalone: true }"
             />
             <input
               type="text"
-              placeholder="Admin PAN" [(ngModel)]="PAN"
+              placeholder="Admin PAN" [(ngModel)]="admin.adminPanNo"
               [ngModelOptions]="{ standalone: true }"
             />
             <input
             type="text"
-            placeholder="Admin DOB" [(ngModel)]="DOB"
+            placeholder="Admin DOB" [(ngModel)]="admin.adminDob"
             [ngModelOptions]="{ standalone: true }"
 
           />
           <button (click)="next()" style="background:rgb(235, 69, 69);">Next</button>
         </div>
         <div *ngIf="loginDiv">
-        <input type="text" placeholder="Enter Username" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }"/>
-            <input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }"/>
-            <input type="text" placeholder="Status" [(ngModel)]="Status" [ngModelOptions]="{ standalone: true }"/>
-            <input type="text" placeholder="Role" [(ngModel)]="Role" [ngModelOptions]="{ standalone: true }"/>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="admin.login.loginUserName" [ngModelOptions]="{ standalone: true }"/>
+            <input type="password" placeholder="Password" [(ngModel)]="admin.login.loginPassword" [ngModelOptions]="{ standalone: true }"/>
+            <input type="text" placeholder="Status" [(ngModel)]="admin.login.status" [ngModelOptions]="{ standalone: true }"/>
+            <input type="text" placeholder="Role" [(ngModel)]="admin.login.role" [ngModelOptions]="{ standalone: true }"/>
             <div class="row" >
               <div class="col-md-6">
                <button (click)="pri()" style="background:rgb(240, 58, 58)">prev</button>
@@ -138,19 +138,19 @@
             <!-- <button (click)="Next()" style="background: green;">Next</button> -->
           </div>
           <div *ngIf="addressDiv">
-          <input type="text" placeholder="Enter viallage" [(ngModel)]="viallage" [ngModelOptions]="{ standalone: true }"/>
-            <input type="text" placeholder="Enter Taluka" [(ngModel)]="Taluka" [ngModelOptions]="{ standalone: true }"/>
-            <input type="text" placeholder="Enter District" [(ngModel)]="District" [ngModelOptions]="{ standalone: true }"/>
-           <input type="text" placeholder="Enter State" [(ngModel)]="State" [ngModelOptions]="{ standalone: true }"/>
-           <input type="text" placeholder="Enter Country" [(ngModel)]="Country" [ngModelOptions]="{ standalone: true }"/>
-           <input type="number" placeholder="Enter ZIP" [(ngModel)]="ZIP" [ngModelOptions]="{ standalone: true }"/>
+          <input type="text" placeholder="Enter viallage" [(ngModel)]="admin.addrs.addressVillage" [ngModelOptions]="{ standalone: true }"/>
+            <input type="text" placeholder="Enter Taluka" [(ngModel)]="admin.addrs.addressTalName" [ngModelOptions]="{ standalone: true }"/>
+            <input type="text" placeholder="Enter District" [(ngModel)]="admin.addrs.addressDistName" [ngModelOptions]="{ standalone: true }"/>
+           <input type="text" placeholder="Enter State" [(ngModel)]="admin.addrs.addressStateName" [ngModelOptions]="{ standalone: true }"/>
+           <input type="text" placeholder="Enter Country" [(ngModel)]="admin.addrs.addressCountryName" [ngModelOptions]="{ standalone: true }"/>
+           <input type="number" placeholder="Enter ZIP" [(ngModel)]="admin.addrs.addressZipcode" [ngModelOptions]="{ standalone: true }"/>
            
            <div class="row" >
             <div class="col-md-3">
              <button (click)="next()" style="background:rgb(238, 61, 61);">prev</button>
             </div>
              <div class="col-md-6">
-              <button (click)="(Next)" style="background:lightseagreen "> SUBMIT</button>
+              <button (click)="sub(admin)" style="background:lightseagreen "> SUBMIT</button>
              </div>
              </div>
 

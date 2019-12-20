@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminDetails } from 'app/model/admin.model';
+import { Login } from 'app/model/login.model';
+import { AddressDetails } from 'app/model/AddressDetails.model';
+import { SheredService } from 'app/shered/shered.service';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +17,43 @@ export class LoginComponent implements OnInit {
   public username = '';
   public password = '';
   public email = '';
-  constructor(private router: Router) {}
+
+  admin: AdminDetails = {
+    adminFirstName: '',
+    adminLastName: '',
+    adminEmailId: '',
+    adminContact: '',
+    adminAadharNo: null,
+    adminPanNo: '',
+    adminDob: null,
+    login: {
+      loginUserName: '',
+      loginPassword: '',
+      status: '',
+      role: null
+    },
+    addrs: {
+      addressVillage: '',
+      addressTalName: '',
+      addressDistName: '',
+      addressStateName: '',
+      addressCountryName: '',
+      addressZipcode: ''
+    }
+  }
+    
+
+
+  constructor(private router: Router,private shered:SheredService) {}
 
   ngOnInit() {}
  adminDiv:boolean=true;
  loginDiv:boolean=false;
  addressDiv:boolean=false;
+
+
+
+ //log=new Login();
 
 pri()
 {
@@ -32,12 +67,23 @@ pri()
     this.addressDiv=false;
     this.adminDiv=false;
     this.loginDiv=true;
+    // return this.shered.addAdmin(this.admin).subscribe(result=>{})
   }
   Next()
   {
     this.addressDiv=true;
     this.adminDiv=false;
     this.loginDiv=false;
+   // return this.shered.addAdmin(this.log).subscribe(result=>{})
+  }
+
+  sub(admin)
+  {
+    this.addressDiv=true;
+    this.adminDiv=false;
+    this.loginDiv=false;
+    return this.shered.addAdmin(this.admin).subscribe(result=>{})
+    console.log(admin);
   }
   toggle() {
     console.log('toggle');

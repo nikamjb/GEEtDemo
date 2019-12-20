@@ -1,0 +1,32 @@
+{
+    "adminDetails":[
+    {
+	
+    "adminFirstName":"jalindar",
+    "adminLastName":"nikam",
+    "adminEmailId":"jnikam42@gmail.com",
+    "adminContact":"9595690604",
+    "adminAadharNo":12345678965,
+    "adminPanNo":"789546233wdg",
+    "adminDob":"11-2-1995",
+    
+    "login":{
+        "loginUserName":"sai@123",
+        "loginPassword":"1234",
+        "status":"ADMIN",
+        "role":101
+    },
+    "address":{
+        
+        "addressVillage":"Pune",
+        "addressTalName":"Vaijapur",
+        "addressDistName":"Pune",
+        "addressStateName":"MH",
+        "addressCountryName":"INDIA",
+        "addressZiPcode":411052
+    }
+        
+        
+} 
+    ]
+    }
